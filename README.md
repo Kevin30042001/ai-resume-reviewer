@@ -1,16 +1,53 @@
-# React + Vite
+# AI Resume Reviewer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Analiza tu CV con inteligencia artificial. Sube un PDF y recibe feedback instantáneo con scores por sección, fortalezas y áreas de mejora.
 
-Currently, two official plugins are available:
+![AI Resume Reviewer](./screenshots/preview.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Demo
 
-## React Compiler
+[ai-resume-reviewer-seven.vercel.app](https://ai-resume-reviewer-seven.vercel.app)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Características
 
-## Expanding the ESLint configuration
+- Upload de CV en PDF con drag & drop
+- Análisis con IA (LLM via OpenRouter)
+- Score general y por sección (experiencia, habilidades, educación, redacción)
+- Sugerencias accionables para mejorar el CV
+- Fortalezas y áreas de mejora identificadas
+- Diseño responsive
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Stack tecnológico
+
+**Frontend:** React · Vite · Axios · react-dropzone · react-circular-progressbar
+**Backend:** Node.js · Express · pdfjs-dist · OpenRouter API
+**IA:** Modelo LLM gratuito via OpenRouter
+**Deploy:** Vercel (frontend) · Render (backend)
+
+## Instalación local
+
+### Backend
+
+```bash
+git clone https://github.com/Kevin30042001/ai-resume-reviewer-api.git
+cd ai-resume-reviewer-api
+npm install
+cp .env.example .env
+# Agregar tu OPENROUTER_API_KEY en .env
+npm run dev
+```
+
+### Frontend
+
+```bash
+git clone https://github.com/Kevin30042001/ai-resume-reviewer.git
+cd ai-resume-reviewer
+npm install
+npm run dev
+```
+
+Abrir `http://localhost:5173`
+
+## Autor
+
+**Kevin** — [@Kevin30042001](https://github.com/Kevin30042001)
